@@ -1,0 +1,168 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+
+*{
+	font-family: 'Bricolage Grotesque';
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-padding-top: 2rem;
+	transition: .3s ease;
+}
+
+a {
+    color: #000000;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+img {
+    border-radius: 8px;
+}
+
+.gallery {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+}
+
+.lg-img img {
+    height: 415px;
+    width: 415px;
+}
+
+.sm-img {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+}
+
+.sm-img img {
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.sm-img img:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+}
+
+.sm-img div:nth-child(-n+2) img {
+    margin-bottom: 10px;
+}
+
+/* Ashish Credits */
+
+.ashish-credits {
+    background-color: #ffb941;
+    border: 2px solid #000;
+    font-size: smaller;
+    padding: .5rem .5rem;
+    width: 300px;
+    display: flex;
+    column-gap: .3rem;
+    justify-content: center;
+    border-radius: 50px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .05);
+    z-index: 9999;
+    position: fixed;
+    align-items: center;
+    bottom: 1rem;
+    right: 1rem;
+    font-weight: 800;
+}
+
+.ashish-credits .icon {
+    color: #000000
+}
+.faculty-credits {
+    background-color: #ffb941;
+    border: 2px solid hsl(0, 0%, 0%);
+    font-size: smaller;
+    padding: .5rem .5rem;
+    width: 200px;
+    display: flex;
+    column-gap: .3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .05);
+    z-index: 9999;
+    position: fixed;
+    bottom: 4.5rem;
+    right: 1rem;
+    font-weight: 800;
+}
+
+.faculty-credits .icon {
+    color: #000000
+}
+.submitted-on {
+    background-color: #ffb941;
+    border: 2px solid hsl(0, 0%, 0%);
+    font-size: smaller;
+    padding: .5rem .5rem;
+    width: 250px;
+    display: flex;
+    column-gap: .3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .05);
+    z-index: 9999;
+    position: fixed;
+    bottom: 8rem;
+    right: 1rem;
+    font-weight: 800;
+}
+
+.submitted-on .icon {
+    color: #000000
+}
+
+/* .ashish-credits:hover, .faculty-credits:hover{
+    box-shadow:  4px 4px rgb(34, 34, 34);
+} */
+
+@media only screen and (max-width: 768px) {
+    .faculty-credits {
+        display: none;
+    }
+    .submitted-on {
+        display: none;
+    }
+}
+
+
+@media (max-width: 870px){
+    .gallery {
+        flex-direction: column;
+    }
+    .lg-img img {
+        height: 375px;
+        width: 375px;
+        margin-bottom: 10px;
+    }
+    .sm-img img {
+        height: 180px;
+        width: 180px;
+        margin: 0 15px 0 0;
+    }
+    .sm-img {
+        grid-template-columns: repeat(2, 2fr);
+    }
+    .sm-img img:nth-child(2n + 1) {
+        margin-left: 0;
+    }
+    .sm-img div:nth-last-child(-n+2) {
+        display: none;
+    }
+}
